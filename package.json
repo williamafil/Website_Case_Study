@@ -14,7 +14,8 @@
     "stylelint-config-recess-order": "^2.4.0",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-scss": "^3.19.0",
-    "vue": "^3.0.5"
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.10"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.5",
