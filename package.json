@@ -6,6 +6,10 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.10"
+  },
+  "devDependencies": {
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-vue": "^7.13.0",
@@ -14,12 +18,9 @@
     "stylelint-config-recess-order": "^2.4.0",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-scss": "^3.19.0",
-    "vue": "^3.0.5",
-    "vue-router": "^4.0.10"
-  },
-  "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.5",
     "@vue/compiler-sfc": "^3.0.5",
+    "prettier": "^2.3.2",
     "vite": "^2.4.2"
   }
 }
