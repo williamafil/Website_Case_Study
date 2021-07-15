@@ -1,6 +1,13 @@
 <template>
-  <div>
-    home
+  <div id="home">
+    <h3>{{ text }}</h3>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
   </div>
 </template>
 
@@ -9,11 +16,19 @@ export default {
   setup () {
     
 
-    return {}
+    return {
+      text: 'hello world',
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-
+#home {
+  ul {
+    li {
+      list-style: none;
+    }
+  }
+}
 </style>
