@@ -1,5 +1,6 @@
 <template>
-  <h1>{{ msg }}</h1>
+  <div>
+<h1>{{ msg }}</h1>
 
   <p>
     <a href="https://vitejs.dev/guide/features.html" target="_blank">
@@ -16,16 +17,18 @@
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
   </p>
+  </div>
+
 </template>
 
 <script setup>
-import { defineProps, reactive } from 'vue'
+import { defineProps, reactive } from 'vue';
 
 defineProps({
-  msg: String
-})
+  msg: String,
+});
 
-const state = reactive({ count: 0 })
+const state = reactive({ count: 0 });
 </script>
 
 <style scoped>

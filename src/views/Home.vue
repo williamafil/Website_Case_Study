@@ -13,22 +13,8 @@
 
 <script>
 export default {
-  setup () {
-    
-
-    return {
-      text: 'hello world',
-    }
-  }
-}
+  setup() {
+    return {};
+  },
+};
 </script>
-
-<style lang="scss" scoped>
-#home {
-  ul {
-    li {
-      list-style: none;
-    }
-  }
-}
-</style>

@@ -6,20 +6,23 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "eslint": "^7.30.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-vue": "^7.13.0",
-    "stylelint": "^13.13.1",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-recess-order": "^2.4.0",
-    "stylelint-config-standard": "^22.0.0",
-    "stylelint-scss": "^3.19.0",
     "vue": "^3.0.5",
     "vue-router": "^4.0.10"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.5",
     "@vue/compiler-sfc": "^3.0.5",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-vue": "^7.13.0",
+    "prettier": "^2.3.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recess-order": "^2.4.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-scss": "^3.19.0",
     "vite": "^2.4.2"
   }
 }
