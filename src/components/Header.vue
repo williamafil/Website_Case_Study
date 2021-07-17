@@ -88,6 +88,7 @@ nav {
     }
   }
   .menu {
+    z-index: 100;
     position: absolute;
     top: 80px;
     left: 0;

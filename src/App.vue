@@ -24,7 +24,8 @@ export default {
 }
 
 body {
-  background-color: rgb(212, 238, 255);
+  /* background-color: rgb(212, 238, 255); */
+  background-color: #fff;
 }
 
 img {

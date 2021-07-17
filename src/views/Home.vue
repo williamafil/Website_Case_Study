@@ -29,6 +29,16 @@
         </main>
       </div>
     </section>
+
+    <section class="what-we-do container">
+      <div>
+        <h2>What we do</h2>
+        <p>
+          We work with leaders across industries to address some of the twenty-first century’s most
+          complex social and business challenges using research, strategy, design, and technology.
+        </p>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -127,6 +137,20 @@ export default {
         top: 0;
       }
     }
+  }
+}
+
+.what-we-do {
+  padding-top: 0;
+  text-align: left;
+  h2 {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 2.25rem;
+    font-weight: 900;
+  }
+
+  p {
+    margin: 1.125rem 0;
   }
 }
 </style>
