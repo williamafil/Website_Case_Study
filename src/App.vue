@@ -24,11 +24,13 @@ export default {
 </script>
 
 <style>
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  font-family: 'Source Sans Pro', sans-serif;
   background-color: rgb(212, 238, 255);
 }
 
