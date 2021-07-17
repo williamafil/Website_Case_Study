@@ -6,7 +6,7 @@
     x="0px"
     y="0px"
     viewBox="0 0 320 84"
-    style="enable-background: new 0 0 320 84"
+    style="background-color: #000"
     xml:space="preserve"
   >
     <g id="logo-black">

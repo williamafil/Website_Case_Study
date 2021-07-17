@@ -2,7 +2,9 @@
   <header>
     <div class="container">
       <nav>
-        <Logo />
+        <router-link to="/" class="logo-link" aria-label="homepage" alt="logo name">
+          <Logo class="logo-svg"
+        /></router-link>
         <input type="checkbox" name="hamburger-toggle" id="hamburger-toggle" />
         <label class="hamburger" for="hamburger-toggle">
           <span class="line top"></span>
@@ -33,9 +35,17 @@
             </ul>
 
             <form role="search" id="search-form">
-	            <button type="submit"><Magnifier /></button>
-              <!-- <input aria-label="Search submit button" class="search-submit" type="submit" id="search-submit" value=""> -->
-	            <input aria-label="Search field" class="search-field" type="search" placeholder="Search…" name="s" id="search-input" value="">
+              <button type="submit" aria-label="Search submit button" class="search-button">
+                <Magnifier class="search-icon" />
+              </button>
+              <input
+                aria-label="Search field"
+                class="search-field"
+                type="search"
+                placeholder="Search…"
+                name="s"
+                value=""
+              />
             </form>
           </div>
         </div>
@@ -60,7 +70,8 @@ export default {
   padding: 1.125em;
 }
 
-header {}
+header {
+}
 
 nav {
   position: relative;
@@ -71,6 +82,14 @@ nav {
   padding: 1.125em;
   background-color: #fff;
 
+  .logo-link {
+    display: flex;
+
+    .logo-svg {
+      width: 70px;
+      height: auto;
+    }
+  }
   .menu {
     position: absolute;
     top: 80px;
@@ -84,6 +103,7 @@ nav {
     transition: all cubic-bezier(0.07, 0.26, 0.27, 1.55) 0.3s;
 
     .wrapper {
+      width: 100%;
       padding: 2.5em 1.25em;
     }
     ul {
@@ -100,7 +120,6 @@ nav {
       font-weight: 900;
       color: #000;
       text-decoration: none;
-
     }
 
     ul li:not(:nth-child(-n + 2)) {
@@ -108,41 +127,25 @@ nav {
     }
 
     ul li:not(:nth-child(-n + 2)) a {
-      font-size: .875rem;
+      font-size: 0.875rem;
       line-height: 1.5;
-
     }
 
-    // ul li {
-    //   margin-bottom: 1.5em;
-    // }
-
-    // ul li a {
-    //   font-size: .875rem;
-
-    // }
-
     ul li:nth-child(-n + 2) {
-          margin-bottom: 2.25em;
+      margin-bottom: 2.25em;
     }
 
     ul li:nth-child(-n + 2) a {
-      margin-bottom: .125em;
+      margin-bottom: 0.125em;
       font-size: 1.6rem;
 
       // font-stretch: ultra-condensed;
-
     }
 
     a:hover {
       border-bottom: 6px solid #000;
     }
   }
-}
-
-svg {
-  width: 70px;
-  height: auto;
 }
 
 input[type='checkbox'] {
@@ -199,11 +202,29 @@ input[type='checkbox']:checked ~ .menu {
   // opacity: 1;
 }
 
-button {
-  background-color: transparent;
-  border: 0;
+#search-form {
+  width: 100%;
+  border-bottom: 6px solid #000;
+  display: flex;
+
+  .search-button {
+    margin-bottom: 0.5em;
+    background-color: transparent;
+    border: 0;
+    width: 25px;
+    cursor: pointer;
+  }
+  .search-icon {
+    width: 25px;
+  }
+
+  .search-field {
+    margin-left: 2em;
+    margin-bottom: 0.5em;
+    width: 100%;
+    border: 0;
+    font-size: 1rem;
+    letter-spacing: 0.01rem;
+  }
 }
-
-
-
 </style>
