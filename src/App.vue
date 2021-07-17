@@ -39,5 +39,7 @@ img {
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  line-height: 1.5;
 }
 </style>
