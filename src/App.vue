@@ -2,20 +2,15 @@
   <div>
     <Header />
     <router-view />
-
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Hello Vue 3 + Vite" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
 import Header from './components/Header.vue';
 
 export default {
   components: {
     Header,
-    HelloWorld,
   },
   setup() {
     return {};
@@ -24,19 +19,23 @@ export default {
 </script>
 
 <style>
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
   background-color: rgb(212, 238, 255);
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: #2c3e50;
+  font-size: 16px;
+  color: #000;
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

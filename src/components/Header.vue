@@ -3,8 +3,8 @@
     <div class="container">
       <nav>
         <router-link to="/" class="logo-link" aria-label="homepage" alt="logo name">
-          <Logo class="logo-svg"
-        /></router-link>
+          <Logo class="logo-svg" />
+        </router-link>
         <input type="checkbox" name="hamburger-toggle" id="hamburger-toggle" />
         <label class="hamburger" for="hamburger-toggle">
           <span class="line top"></span>
@@ -68,9 +68,6 @@ export default {
 <style lang="scss" scoped>
 .container {
   padding: 1.125em;
-}
-
-header {
 }
 
 nav {
