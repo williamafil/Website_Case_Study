@@ -56,22 +56,21 @@ export default {
 }
 
 .hero {
-  background-color: #fff;
-
   display: flex;
   flex-direction: column;
   text-align: left;
+  background-color: #fff;
 
   .motto {
+    margin: 0.5rem 0 1.5rem 0;
     font-size: 2.625rem;
     font-weight: 900;
-
-    margin: 0.5rem 0 1.5rem 0;
+    line-height: 1.2;
   }
   .description {
+    margin: 0 0 2.625rem 0;
     font-size: 0.875rem;
     font-weight: 400;
-    margin: 0 0 2.625rem 0;
   }
 }
 
@@ -83,24 +82,24 @@ export default {
   }
 
   .case-study-card {
-    margin: 1.125em;
     padding: 1.125em;
-    transform: translateY(-80px);
+    margin: 1.125em;
     background-color: #fff;
+    transform: translateY(-80px);
 
     .header {
       h6.tag {
-        text-align: left;
-        font-size: 0.75rem;
         margin: 6px 0 8px 0;
+        font-size: 0.75rem;
         font-weight: 900;
+        text-align: left;
       }
       h3.title {
-        text-align: left;
         font-family: 'Source Serif Pro', serif;
         font-size: 1.125rem;
         font-weight: 700;
         line-height: 1.35;
+        text-align: left;
       }
     }
     .content {
@@ -114,27 +113,27 @@ export default {
       .read-more-btn {
         position: relative;
         font-size: 1rem;
-        text-decoration: none;
-        color: #000;
         font-weight: 900;
+        color: #000;
+        text-decoration: none;
       }
 
       .read-more-btn::after {
-        content: '';
         position: absolute;
         top: 8px;
         right: 0;
-        background-color: #d1d3d4;
-        height: 1em;
-        width: 90%;
         z-index: -1;
+        width: 90%;
+        height: 1em;
+        content: '';
+        background-color: #d1d3d4;
         transition: 0.1s ease-in-out all;
       }
 
       .read-more-btn:hover::after {
+        top: 0;
         width: 100%;
         height: 1.5em;
-        top: 0;
       }
     }
   }

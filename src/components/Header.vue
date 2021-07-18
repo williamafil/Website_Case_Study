@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="container">
-      <nav>
+      <nav class="sticky">
         <router-link to="/" class="logo-link" aria-label="homepage" alt="logo name">
           <Logo class="logo-svg" />
         </router-link>
@@ -66,8 +66,22 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+
+header {
+  height: 85px;
+}
 .container {
+  position: relative;
   padding: 1.125em;
+}
+
+nav.sticky {
+  position:fixed;
+  top:0;
+  left:0;
+  z-index: 100;
+  width: calc(100vw - 2.25em);
+  margin: 1.125em;
 }
 
 nav {
@@ -75,6 +89,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width:100%;
   height: 85px;
   padding: 1.125em;
   background-color: #fff;
@@ -88,10 +103,10 @@ nav {
     }
   }
   .menu {
-    z-index: 100;
     position: absolute;
     top: 80px;
     left: 0;
+    z-index: 100;
     display: flex;
     justify-content: flex-start;
     width: 100%;
@@ -201,28 +216,28 @@ input[type='checkbox']:checked ~ .menu {
 }
 
 #search-form {
+  display: flex;
   width: 100%;
   border-bottom: 6px solid #000;
-  display: flex;
 
   .search-button {
+    width: 25px;
     margin-bottom: 0.5em;
+    cursor: pointer;
     background-color: transparent;
     border: 0;
-    width: 25px;
-    cursor: pointer;
   }
   .search-icon {
     width: 25px;
   }
 
   .search-field {
-    margin-left: 2em;
-    margin-bottom: 0.5em;
     width: 100%;
-    border: 0;
+    margin-bottom: 0.5em;
+    margin-left: 2em;
     font-size: 1rem;
     letter-spacing: 0.01rem;
+    border: 0;
   }
 }
 </style>
