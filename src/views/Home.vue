@@ -38,15 +38,19 @@
           complex social and business challenges using research, strategy, design, and technology.
         </p>
       </div>
+      <HomeAccordion />
     </section>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </div>
 </template>
 
 <script>
+import HomeAccordion from '@/components/HomeAccordion.vue';
+
 export default {
-  setup() {
-    return {};
-  },
+  components: { HomeAccordion },
+
 };
 </script>
 
