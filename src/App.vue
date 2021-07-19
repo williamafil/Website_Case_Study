@@ -34,6 +34,39 @@ img {
   height: auto;
 }
 
+p {
+  margin: 1em 0;
+  font-size: 0.875rem;
+}
+
+/*
+  TITLE: Button Animation
+*/
+.animated-btn {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #000;
+  text-decoration: none;
+  z-index: 10;
+}
+.animated-btn::after {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  z-index: -1;
+  width: 90%;
+  height: 1em;
+  content: '';
+  background-color: #d1d3d4;
+  transition: 0.1s ease-in-out all;
+}
+.animated-btn:hover::after {
+  top: 0;
+  width: 100%;
+  height: 1.5em;
+}
+
 #app {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
@@ -43,5 +76,4 @@ img {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 </style>

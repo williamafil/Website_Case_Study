@@ -19,7 +19,12 @@
             :aria-label="item.title + ' service'"
           />
         </div>
-        <div class="item-description"></div>
+        <div class="item-description">
+          <p class="item-description-paragraph">{{ item.description }}</p>
+          <router-link to="/" class="animated-btn case-study-btn"
+            >{{ item.title }} case studies</router-link
+          >
+        </div>
       </div>
     </article>
   </div>
@@ -95,7 +100,8 @@ export default {
     align-items: center;
     justify-content: space-between;
     height: 68px;
-    background-color: #fff;
+    // background-color: #fff;
+    cursor: pointer;
 
     .item-title {
       position: relative;
@@ -103,18 +109,24 @@ export default {
       font-family: 'Source Serif Pro', serif;
       font-size: 1.125rem;
       font-weight: 700;
-      line-height: 1.3333;
+      line-height: 1.5;
     }
 
     .item-title::after {
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 0;
-      height: 8px;
-      content: '';
+      // position: absolute;
+      // bottom: -10px;
+      // left: 0;
+      // width: 0;
+      // height: 8px;
+      // content: '';
+      // background-color: #000;
+      // transition: all cubic-bezier(0.53, 0.1, 0.73, 0.4) 0.3s;
+      display: block;
       background-color: #000;
-      transition: all cubic-bezier(0.85, -0.35, 0.75, 0.6) 0.3s;
+      height: 0.45em;
+      transition: all 0.3s ease-in-out;
+      content: '';
+      width: 0;
     }
 
     .item-icon {
@@ -125,14 +137,32 @@ export default {
   .item-content {
     height: 0;
     overflow: hidden;
-    background-color: #fff;
+    // background-color: #fff;
     // transition: all cubic-bezier(0.07, 0.26, 0.27, 1.55) 0.3s;
     transition: all ease-in-out 0.3s;
+
+    .item-description {
+      padding: 6px 24px 18px;
+      margin-right: 40px;
+      background-color: #fff;
+      border-top: 0.45em solid #000;
+      width: 95%;
+      position: relative;
+      top: -30px;
+
+      .item-description-paragraph {
+        margin: 1rem 0;
+      }
+
+      .case-study-btn::after {
+        background-color: #cedfc1;
+      }
+    }
   }
 
   input[type='checkbox']:checked ~ .item-content {
     // height: inherit;
-    height: 300px;
+    height: 100%;
   }
   input[type='checkbox']:checked ~ label .item-icon {
     transform: rotate(225deg);

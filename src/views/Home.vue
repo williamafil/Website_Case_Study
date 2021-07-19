@@ -21,11 +21,11 @@
           <h3 class="title">Helping children thrive with access to safe, healthy child care.</h3>
         </header>
         <main class="content">
-          <p>
+          <p class="case-study-paragraph">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sed ducimus sunt
             aperiam, dignissimos ratione quia, maxime veniam voluptates vitae.
           </p>
-          <router-link to="/" class="read-more-btn">Read our case study</router-link>
+          <router-link to="/" class="animated-btn read-more-btn">Read our case study</router-link>
         </main>
       </div>
     </section>
@@ -33,7 +33,7 @@
     <section class="what-we-do container">
       <div>
         <h2>What we do</h2>
-        <p>
+        <p class="what-we-do-description">
           We work with leaders across industries to address some of the twenty-first century’s most
           complex social and business challenges using research, strategy, design, and technology.
         </p>
@@ -50,7 +50,6 @@ import HomeAccordion from '@/components/HomeAccordion.vue';
 
 export default {
   components: { HomeAccordion },
-
 };
 </script>
 
@@ -109,35 +108,12 @@ export default {
     .content {
       text-align: left;
 
-      p {
+      .case-study-paragraph {
         margin: 1em 0;
-        font-size: 0.875rem;
-      }
-
-      .read-more-btn {
-        position: relative;
-        font-size: 1rem;
-        font-weight: 900;
-        color: #000;
-        text-decoration: none;
       }
 
       .read-more-btn::after {
-        position: absolute;
-        top: 8px;
-        right: 0;
-        z-index: -1;
-        width: 90%;
-        height: 1em;
-        content: '';
         background-color: #d1d3d4;
-        transition: 0.1s ease-in-out all;
-      }
-
-      .read-more-btn:hover::after {
-        top: 0;
-        width: 100%;
-        height: 1.5em;
       }
     }
   }
