@@ -24,9 +24,8 @@ export default {
 }
 
 body {
-  background-color: rgb(212, 238, 255);
-
-  /* background-color: #fff; */
+  /* background-color: rgb(212, 238, 255); */
+  background-color: #fff;
 }
 
 img {
@@ -35,12 +34,25 @@ img {
 }
 
 p {
-  margin: 1em 0;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 /*
-  TITLE: Button Animation
+  ::: H2
+*/
+.section-heading {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 2.25rem;
+  font-weight: 900;
+  margin-top: 1.875rem;
+}
+.section-description {
+  font-size: 1.125rem;
+  margin: 1.125rem 0;
+}
+
+/*
+  ::: Button Animation
 */
 .animated-btn {
   position: relative;

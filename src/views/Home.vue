@@ -32,13 +32,27 @@
 
     <section class="what-we-do container">
       <div>
-        <h2>What we do</h2>
-        <p class="what-we-do-description">
+        <h2 class="section-heading">What we do</h2>
+        <p class="section-description">
           We work with leaders across industries to address some of the twenty-first century’s most
           complex social and business challenges using research, strategy, design, and technology.
         </p>
       </div>
       <HomeAccordion />
+    </section>
+
+    <section class="clients container">
+      <div>
+        <h2 class="section-heading">Clients</h2>
+        <div>
+          <p class="section-description">
+            For more than two decades we’ve helped organizations leverage design and technology to
+            create better service experiences.
+          </p>
+          <router-link to="/" class="animated-btn see-more-btn">See more clients</router-link>
+        </div>
+      </div>
+      <HomeClientsLoop />
     </section>
 
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -47,9 +61,13 @@
 
 <script>
 import HomeAccordion from '@/components/HomeAccordion.vue';
+import HomeClientsLoop from '@/components/HomeClientsLoop.vue';
 
 export default {
-  components: { HomeAccordion },
+  components: {
+    HomeAccordion,
+    HomeClientsLoop,
+  },
 };
 </script>
 
@@ -119,17 +137,21 @@ export default {
   }
 }
 
-.what-we-do {
+section.what-we-do,
+section.clients {
   padding-top: 0;
   text-align: left;
-  h2 {
-    font-family: 'Source Serif Pro', serif;
-    font-size: 2.25rem;
-    font-weight: 900;
-  }
+}
 
-  p {
-    margin: 1.125rem 0;
+.clients {
+  div {
+    margin-bottom: 1rem;
+  }
+  // .see-more-btn {
+  //   margin: 1em 0;
+  // }
+  .see-more-btn::after {
+    background-color: #bedde3;
   }
 }
 </style>

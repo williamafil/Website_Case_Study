@@ -135,11 +135,12 @@ export default {
   }
 
   .item-content {
-    height: 0;
+    max-height: 0;
+    // height: 0;
     overflow: hidden;
     // background-color: #fff;
     // transition: all cubic-bezier(0.07, 0.26, 0.27, 1.55) 0.3s;
-    transition: all ease-in-out 0.3s;
+    transition: max-height ease-in-out 0.3s;
 
     .item-description {
       padding: 6px 24px 18px;
@@ -161,8 +162,7 @@ export default {
   }
 
   input[type='checkbox']:checked ~ .item-content {
-    // height: inherit;
-    height: 100%;
+    max-height: 600px;
   }
   input[type='checkbox']:checked ~ label .item-icon {
     transform: rotate(225deg);
