@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <section class="hero container">
-      <h2 class="motto">Make New Experiences Possible</h2>
+      <h2 class="h2-motto">Make New Experiences Possible</h2>
       <h1 class="description">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores maxime id sed,
         repellendus commodi aperiam vero molestiae officia mollitia ad. A vel eius iste praesentium!
@@ -105,6 +105,30 @@
       </div>
     </section>
 
+    <section class="design-innovation">
+      <h2 class="h2-motto tilt-heading">Design for Innovation</h2>
+      <div class="image-wrapper">
+        <img
+          src="https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+          alt="change by design"
+          aria-label="Change by design photo"
+        />
+      </div>
+
+      <div class="desc-box">
+        <p class="section-description">
+          Find out how we help educators, policymakers, planners, and activists address global
+          Sustainable Development Goals through human-centred design and technology.
+        </p>
+        <router-link
+          to="/"
+          class="animated-btn design-innovation-btn"
+          aria-label="Learn more about deisign for innovation"
+          >About Design for Innovation</router-link
+        >
+      </div>
+    </section>
+
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </div>
 </template>
@@ -132,12 +156,6 @@ export default {
   text-align: left;
   background-color: #fff;
 
-  .motto {
-    margin: 0.5rem 0 1.5rem 0;
-    font-size: 2.625rem;
-    font-weight: 900;
-    line-height: 1.2;
-  }
   .description {
     margin: 0 0 2.625rem 0;
     font-size: 0.875rem;
@@ -268,5 +286,60 @@ section.insights {
       border-bottom: 7px solid #000;
     }
   }
+}
+
+.design-innovation {
+  background-color: #ccc;
+  margin-top: 4em;
+  position: relative;
+  height: 760px;
+
+  .image-wrapper {
+    width: 40%;
+    max-width: 350px;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+  }
+
+  @media (max-width: 769px) {
+    .image-wrapper {
+      display: none;
+    }
+  }
+
+  .tilt-heading {
+    text-align: left;
+    width: 200px;
+    line-height: 1;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    transform: rotate(-45deg);
+  }
+
+  .desc-box {
+    text-align: left;
+    margin: 0 auto;
+    padding: 2.25em;
+    width: 75%;
+    max-width: 600px;
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    p {
+      font-size: 1.25rem;
+    }
+    .design-innovation-btn:after {
+      background-color: #f6eca5;
+    }
+  }
+  // @media (min-width: 980px) {
+  //   .desc-box {
+  //     // font-size: 1.8rem;
+  //   }
+  // }
 }
 </style>

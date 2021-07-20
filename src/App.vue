@@ -40,6 +40,12 @@ p {
 /*
   ::: H2
 */
+.h2-motto {
+  margin: 0.5rem 0 1.5rem 0;
+  font-size: 2.625rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
 .section-heading {
   font-family: 'Source Serif Pro', serif;
   font-size: 2.25rem;
