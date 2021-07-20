@@ -18,7 +18,7 @@
       <div class="case-study-card">
         <header class="header">
           <h6 class="tag">Case study</h6>
-          <h3 class="title">Helping children thrive with access to safe, healthy child care.</h3>
+          <h3 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci.</h3>
         </header>
         <main class="content">
           <p class="case-study-paragraph">
@@ -34,8 +34,9 @@
       <div>
         <h2 class="section-heading">What we do</h2>
         <p class="section-description">
-          We work with leaders across industries to address some of the twenty-first century’s most
-          complex social and business challenges using research, strategy, design, and technology.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe mollitia esse voluptates
+          architecto porro error placeat, facere dolore repellendus! Mollitia, reiciendis ea!
+          Aspernatur.
         </p>
       </div>
       <HomeAccordion />
@@ -46,13 +47,62 @@
         <h2 class="section-heading">Clients</h2>
         <div>
           <p class="section-description">
-            For more than two decades we’ve helped organizations leverage design and technology to
-            create better service experiences.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat voluptatem quod eius
+            dicta eos obcaecati a explicaborod.
           </p>
           <router-link to="/" class="animated-btn see-more-btn">See more clients</router-link>
         </div>
       </div>
       <HomeClientsLoop />
+    </section>
+
+    <section class="insights container">
+      <div>
+        <h2 class="section-heading">Insights</h2>
+        <div>
+          <p class="section-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia velit ipsa autem,
+            corrupti, asperiores inventore libero dignissimos exercitatiom.
+          </p>
+        </div>
+        <div class="cards-container">
+          <a href="#" class="insight-link" aria-label="Toddler-first usability testing">
+            <articles class="insight-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1505976442149-53a82393903b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                  alt="Boy playing abbacus"
+                />
+              </div>
+              <div class="insight-desc">Toddler-first usability testing</div>
+            </articles>
+          </a>
+          <a href="#" class="insight-link" aria-label="Toddler-first usability testing">
+            <articles class="insight-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1586936893354-362ad6ae47ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                  alt="User Journey Map"
+                />
+              </div>
+              <div class="insight-desc">
+                How to broaden your reach and reduce participant barriers with remote user research
+              </div>
+            </articles>
+          </a>
+          <a href="#" class="insight-link" aria-label="Toddler-first usability testing">
+            <articles class="insight-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=995&q=80"
+                  alt="Data reporting dashboard"
+                />
+              </div>
+              <div class="insight-desc">Toddler-first usability testing</div>
+            </articles>
+          </a>
+        </div>
+      </div>
     </section>
 
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -138,7 +188,8 @@ export default {
 }
 
 section.what-we-do,
-section.clients {
+section.clients,
+section.insights {
   padding-top: 0;
   text-align: left;
 }
@@ -152,6 +203,70 @@ section.clients {
   // }
   .see-more-btn::after {
     background-color: #bedde3;
+  }
+}
+
+.insights {
+  .cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 300px;
+      background-color: #fff;
+      position: relative;
+    }
+
+    a:not(:first-child) {
+      display: none;
+    }
+
+    @media (min-width: 980px) {
+      a {
+        width: 28%;
+        height: 400px;
+      }
+
+      a:not(:first-child) {
+        display: block;
+      }
+    }
+
+    .image-wrapper {
+      height: 300px;
+    }
+
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .insight-desc {
+      background-color: #fff;
+      font-family: 'Source Serif Pro', serif;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #000;
+      border-bottom: 7px solid transparent;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 1.5rem 2.3rem 1.5rem 0;
+    }
+
+    @media (min-width: 980px) {
+      .insight-desc {
+        font-size: 1.5rem;
+      }
+    }
+
+    a:hover .insight-desc {
+      border-bottom: 7px solid #000;
+    }
   }
 }
 </style>
