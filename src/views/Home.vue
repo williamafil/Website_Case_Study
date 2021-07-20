@@ -129,6 +129,34 @@
       </div>
     </section>
 
+    <section class="news container">
+      <h2 class="section-heading">News and events</h2>
+      <div class="news-card-container">
+        <a href="#" class="news-link" aria-label="National Indigenous History Month">
+          <article class="news-card">
+            <h4 class="news-heading">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit Magni autem impedit
+            </h4>
+            <h5 class="news-date">June 9, 2021</h5>
+          </article>
+        </a>
+        <a href="#" class="news-link" aria-label="National Indigenous History Month">
+          <article class="news-card">
+            <h4 class="news-heading">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis extd sed, voluptates
+            </h4>
+            <h5 class="news-date">May 17, 2021</h5>
+          </article>
+        </a>
+        <a href="#" class="news-link" aria-label="National Indigenous History Month">
+          <article class="news-card">
+            <h4 class="news-heading">Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+            <h5 class="news-date">June 9, 2021</h5>
+          </article>
+        </a>
+      </div>
+    </section>
+
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </div>
 </template>
@@ -207,7 +235,8 @@ export default {
 
 section.what-we-do,
 section.clients,
-section.insights {
+section.insights,
+section.news {
   padding-top: 0;
   text-align: left;
 }
@@ -341,5 +370,65 @@ section.insights {
   //     // font-size: 1.8rem;
   //   }
   // }
+}
+
+.news {
+  .news-card-container {
+    display: flex;
+    flex-direction: column;
+
+    .news-link {
+      width: 90%;
+      margin: 0.7rem 0;
+      position: relative;
+      text-decoration: none;
+      color: #000;
+    }
+    .news-link:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '';
+      width: 20px;
+      height: 5px;
+      background-color: #000;
+    }
+
+    .news-card {
+      margin-bottom: 0.5em;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+
+      .news-heading,
+      .news-date {
+        margin: 1rem 0;
+      }
+
+      h4.news-heading {
+        font-size: 1rem;
+        line-height: 1.5;
+        font-family: 'Source Serif Pro', serif;
+        font-weight: 700;
+      }
+      h5.news-date {
+        font-size: 0.75rem;
+        line-height: 1.5;
+        font-family: 'Source Pro', sans-serif;
+        font-weight: 600;
+      }
+    }
+  }
+  @media (min-width: 980px) {
+    .news-card-container {
+      flex-direction: row;
+      justify-content: space-between;
+      .news-card {
+        width: 90%;
+      }
+    }
+  }
 }
 </style>
