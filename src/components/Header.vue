@@ -55,7 +55,7 @@
 </template>
 
 <script>
-import Magnifier from '@/components/images/Magnifier.vue';
+import Magnifier from './images/Magnifier.vue';
 import Logo from './images/Logo.vue';
 
 export default {
@@ -66,7 +66,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-
 header {
   height: 85px;
 }
@@ -76,9 +75,9 @@ header {
 }
 
 nav.sticky {
-  position:fixed;
-  top:0;
-  left:0;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 100;
   width: calc(100vw - 2.25em);
   margin: 1.125em;
@@ -89,7 +88,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width:100%;
+  width: 100%;
   height: 85px;
   padding: 1.125em;
   background-color: #fff;
