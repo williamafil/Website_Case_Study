@@ -1,5 +1,6 @@
 <template>
   <div id="home">
+    <div class="onScrollBG-nav"></div>
     <section class="hero container">
       <h2 class="h2-motto">Make New Experiences Possible</h2>
       <h1 class="description">
@@ -67,7 +68,7 @@
         </div>
         <div class="cards-container">
           <a href="#" class="insight-link" aria-label="Toddler-first usability testing">
-            <articles class="insight-card">
+            <div class="insight-card">
               <div class="image-wrapper">
                 <img
                   src="https://images.unsplash.com/photo-1505976442149-53a82393903b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
@@ -75,10 +76,10 @@
                 />
               </div>
               <div class="insight-desc">Toddler-first usability testing</div>
-            </articles>
+            </div>
           </a>
           <a href="#" class="insight-link" aria-label="Toddler-first usability testing">
-            <articles class="insight-card">
+            <div class="insight-card">
               <div class="image-wrapper">
                 <img
                   src="https://images.unsplash.com/photo-1586936893354-362ad6ae47ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
@@ -88,10 +89,10 @@
               <div class="insight-desc">
                 How to broaden your reach and reduce participant barriers with remote user research
               </div>
-            </articles>
+            </div>
           </a>
           <a href="#" class="insight-link" aria-label="Toddler-first usability testing">
-            <articles class="insight-card">
+            <div class="insight-card">
               <div class="image-wrapper">
                 <img
                   src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=995&q=80"
@@ -99,13 +100,25 @@
                 />
               </div>
               <div class="insight-desc">Toddler-first usability testing</div>
-            </articles>
+            </div>
           </a>
         </div>
       </div>
     </section>
 
     <section class="design-innovation">
+      <div class="onScrollBG-design">
+        <div class="red"></div>
+        <div class="blue-boxes">
+          <div class="light-blue"></div>
+          <div class="dark-blue"></div>
+        </div>
+        <div class="space"></div>
+        <div class="purple-boxes">
+          <div class="light-purple"></div>
+          <div class="dark-purple"></div>
+        </div>
+      </div>
       <h2 class="h2-motto tilt-heading">Design for Innovation</h2>
       <div class="image-wrapper">
         <img
@@ -155,103 +168,124 @@
           </article>
         </a>
       </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <section class="logo">
-          <router-link :to="{ name: Home }"><Logo color="white" /></router-link>
-        </section>
-
-        <section class="newsletter">
-          <p class="newsletter-desc">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, eveniet minus? Soluta
-            neque eaque asperiores optio perferendis maiores cupiditate.
-          </p>
-          <div class="subscription-form">
-            <form @submit.prevent="">
-              <input
-                class="email-input"
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-                value=""
-                autocomplete="email"
-              />
-              <input type="submit" value="Subscribe" class="submit-button" />
-            </form>
-          </div>
-        </section>
-
-        <section class="info office">
-          <h3 class="info-heading">Vancouver</h3>
-          <p class="office-address">
-            <span>123-45 Burrard Street</span>
-            <span>Vancouver, BC V2V 3A3</span>
-            <span>Canada</span>
-          </p>
-        </section>
-
-        <section class="info explore">
-          <h3 class="info-heading">Explore</h3>
-          <ul class="explore-list">
-            <li><router-link to="/">Our work</router-link></li>
-            <li><router-link to="/">About us</router-link></li>
-            <li><router-link to="/">Design for Innovation</router-link></li>
-            <li><router-link to="/">Insights</router-link></li>
-            <li><router-link to="/">News and events</router-link></li>
-            <li><router-link to="/">Careers</router-link></li>
-            <li><router-link to="/">Contact</router-link></li>
-          </ul>
-        </section>
-
-        <section class="info social">
-          <h3 class="info-heading">Social</h3>
-          <ul class="social-list">
-            <li><router-link to="/">LinkedIn</router-link></li>
-            <li><router-link to="/">Twitter</router-link></li>
-            <li><router-link to="/">Dribbble</router-link></li>
-            <li><router-link to="/">Instagram</router-link></li>
-          </ul>
-        </section>
-
-        <section class="info inquiries">
-          <h3 class="info-heading">Inquiries</h3>
-          <ul class="inquiries-list">
-            <li><router-link to="/">hello@abc.com</router-link></li>
-            <li><router-link to="/">work@abc.com</router-link></li>
-          </ul>
-        </section>
-
-        <section class="info misc">
-          <h3 class="info-heading"></h3>
-          <ul class="misc-list">
-            <li><router-link to="/">Privacy Policy</router-link></li>
-            <li><router-link to="/">Back to top</router-link></li>
-          </ul>
-        </section>
+      <div class="onScrollBG-footer">
+        <div class="oval"></div>
       </div>
-    </footer>
+    </section>
   </div>
 </template>
 
 <script>
-import Logo from '../components/images/Logo.vue';
+import { gsap, ScrollTrigger } from 'gsap/all';
 import HomeAccordion from '../components/HomeAccordion.vue';
 import HomeClientsLoop from '../components/HomeClientsLoop.vue';
 
+gsap.registerPlugin(ScrollTrigger);
 export default {
+  name: 'Home',
   components: {
-    Logo,
     HomeAccordion,
     HomeClientsLoop,
+  },
+  mounted() {
+    // nav blue box
+    gsap.to('.onScrollBG-nav', {
+      x: 1000,
+      y: -1000,
+      scrollTrigger: {
+        trigger: '.onScrollBG-nav',
+        markers: false,
+        start: 'bottom 40%',
+        end: 'bottom -50%',
+        scrub: 1,
+      },
+    });
+
+    // design for innovation
+    // red box
+    gsap.to('.red', {
+      x: 800,
+      scrollTrigger: {
+        trigger: '.red',
+        markers: false,
+        start: 'bottom 80%',
+        end: 'bottom 20%',
+        scrub: 1,
+      },
+    });
+    // light blue box
+    gsap.to('.light-blue', {
+      x: 800,
+      scrollTrigger: {
+        trigger: '.light-blue',
+        markers: false,
+        start: 'bottom 80%',
+        end: 'bottom 30%',
+        scrub: 1,
+      },
+    });
+    // dark blue box
+    gsap.to('.dark-blue', {
+      x: -500,
+      scrollTrigger: {
+        trigger: '.dark-blue',
+        markers: false,
+        start: 'bottom 70%',
+        end: 'bottom -50%',
+        scrub: 1,
+      },
+    });
+
+    gsap.to('.dark-purple', {
+      x: 500,
+      scrollTrigger: {
+        trigger: '.dark-purple',
+        markers: false,
+        start: 'top 70%',
+        end: 'top -40%',
+        scrub: 1,
+      },
+    });
+
+    gsap.to('.light-purple', {
+      x: -500,
+      scrollTrigger: {
+        trigger: '.light-purple',
+        markers: false,
+        start: 'bottom 85%',
+        end: 'bottom -10%',
+        scrub: 1,
+      },
+    });
+
+    gsap.to('.oval', {
+      y: -600,
+      scrollTrigger: {
+        trigger: '.oval',
+        markers: false,
+        start: 'top 95%',
+        end: 'top 90%',
+        scrub: 1,
+      },
+    });
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.container {
-  padding: 1.125em;
+#home {
+  position: relative;
+}
+
+.onScrollBG-nav {
+  background-color: #0976ac;
+  width: 300px;
+  height: 500px;
+  transform: rotate(45deg);
+
+  position: fixed;
+  top: -180px;
+  left: -250px;
 }
 
 .hero {
@@ -259,12 +293,7 @@ export default {
   flex-direction: column;
   text-align: left;
   background-color: #fff;
-
-  .description {
-    margin: 0 0 2.625rem 0;
-    font-size: 0.875rem;
-    font-weight: 400;
-  }
+  z-index: 100;
 }
 
 .case-study {
@@ -394,10 +423,101 @@ section.news {
 }
 
 .design-innovation {
-  background-color: #ccc;
   margin-top: 4em;
   position: relative;
   height: 760px;
+  overflow: hidden;
+
+  .tilt-heading {
+    text-align: left;
+    width: 200px;
+    line-height: 1;
+    // position: sticky;
+    // left: 200px;
+    // bottom: 500px;
+    position: absolute;
+    top: 120px;
+    // left: 150px;
+    left: 30%;
+    right: 70%;
+
+    transform: rotate(-45deg);
+    color: #fff;
+  }
+  .onScrollBG-design {
+    position: relative;
+    // top: 0;
+    // left: -500;
+    width: 100%;
+    height: 100%;
+
+    transform-origin: center top;
+    transform: rotate(-45deg);
+
+    .red {
+      position: absolute;
+      top: -240px;
+
+      width: 1100px;
+      height: 240px;
+      background-color: #de4d45;
+
+      transform: translateX(-200px);
+    }
+    .blue-boxes {
+      position: relative;
+      width: 1200px;
+
+      .dark-blue {
+        position: absolute;
+        width: 1100px;
+        height: 240px;
+        background-color: #1e4173;
+        transform: translateX(200px);
+      }
+      .light-blue {
+        position: absolute;
+        width: 1100px;
+        height: 240px;
+
+        background-color: #62b7d8;
+        transform: translateX(-230px);
+        z-index: 1;
+      }
+    }
+
+    .space {
+      position: absolute;
+      top: 480px;
+      width: 100%;
+      height: 240px;
+      background-color: #fff;
+    }
+    .purple-boxes {
+      position: relative;
+      width: 1200px;
+      display: flex;
+
+      .light-purple {
+        position: absolute;
+        top: 480px;
+        order: 2;
+        width: 1500px;
+        height: 240px;
+        background-color: #9f9ccd;
+        transform: translateX(500px);
+      }
+      .dark-purple {
+        position: absolute;
+        top: 480px;
+        order: 1;
+        width: 1100px;
+        height: 240px;
+        background-color: #75629e;
+        transform: translateX(-1100px);
+      }
+    }
+  }
 
   .image-wrapper {
     width: 40%;
@@ -411,16 +531,6 @@ section.news {
     .image-wrapper {
       display: none;
     }
-  }
-
-  .tilt-heading {
-    text-align: left;
-    width: 200px;
-    line-height: 1;
-    position: absolute;
-    top: 150px;
-    left: 50px;
-    transform: rotate(-45deg);
   }
 
   .desc-box {
@@ -508,226 +618,19 @@ section.news {
   }
 }
 
-footer {
-  background-color: #000;
-  color: #fff;
-
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
-  .container {
-    display: grid;
-    grid-template-columns: repeat(8, minmax(16px, 1fr));
-    text-align: left;
-    font-weight: 900;
-    font-size: 0.875rem;
-    line-height: 1.5;
-  }
-
-  li {
-    margin-top: 0.5em;
-    margin-bottom: 1em;
-  }
-
-  .logo {
-    margin-top: 10px;
-    margin-bottom: 35px;
-    grid-column-start: 1;
-    grid-column-end: span 2;
-  }
-  .newsletter {
-    grid-column-start: 1;
-    grid-column-end: span 8;
-
-    .newsletter-desc {
-      margin-bottom: 1em;
-    }
-    .subscription-form form {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    input {
-      border: 0;
-      background-color: transparent;
-      height: 35px;
-    }
-
-    input[type='email'] {
-      width: 80%;
-      border-bottom: 4px solid #fff;
-      color: #fff;
-      font-size: 1rem;
-      margin-right: 20px;
-    }
-    input[type='submit'] {
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 900;
-      // width: 20%;
-    }
-  }
-
-  .info {
-    margin-top: 48px;
-  }
-
-  h3.info-heading {
-    font-size: 1.5rem;
-    font-family: 'Source Serif Pro', serif;
-    font-weight: 700;
-    margin-top: 1.5em;
-    margin-bottom: 0.75rem;
-  }
-
-  .office {
-    grid-column-start: 1;
-    grid-column-end: span 4;
-
-    .office-address {
-      font-size: 0.875rem;
-      line-height: 1.5;
-
-      span {
-        display: block;
-      }
-    }
-  }
-  .explore {
-    grid-column-start: 1;
-    grid-column-end: span 4;
-    grid-row-start: 8;
-  }
-
-  .social {
-    grid-column-start: 5;
-    grid-column-end: span 4;
-    grid-row-start: 8;
-  }
-
-  .inquiries {
-    grid-column-start: 1;
-    grid-column-end: span 4;
-    grid-row-start: 16;
-  }
-
-  .misc {
-    grid-column-start: 5;
-    grid-column-end: span 4;
-    grid-row-start: 16;
-  }
-
-  @media (min-width: 768px) {
-    .container {
-      grid-template-columns: repeat(18, minmax(16px, 48px));
-      column-gap: 24px;
-    }
-
-    .newsletter {
-      /* grid-column: 1 / span 8; */
-      grid-column-start: 1;
-      grid-column-end: span 8;
-      /* grid-row: 2; */
-      grid-row-start: 2;
-    }
-
-    .info {
-      margin-top: 48px;
-    }
-
-    .newsletter,
-    .office,
-    .inquiries,
-    .explore {
-      grid-column-start: 7;
-    }
-
-    .social,
-    .misc {
-      grid-column-start: 14;
-    }
-
-    .newsletter {
-      grid-row: 1 / 3;
-      grid-column: 7 / span 11;
-    }
-
-    .office {
-      grid-row-end: span 3;
-      grid-column-end: span 5;
-    }
-
-    .explore,
-    .social {
-      grid-row-start: 6;
-    }
-
-    .inquiries,
-    .misc {
-      grid-row-start: 13;
-    }
-  }
-
-  @media (min-width: 980px) {
-    .container {
-      grid-template-columns: repeat(24, minmax(16px, 48px));
-      column-gap: 24px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .newsletter {
-      grid-column: 8 / span 12;
-      grid-row: 1 / 2;
-    }
-
-    .office,
-    .inquiries,
-    .explore,
-    .social {
-      margin-top: 60px;
-    }
-
-    .info {
-      grid-row-end: span 5;
-    }
-
-    .office {
-      grid-column-start: 8;
-      grid-column-end: span 4;
-      grid-row: 2 / span 2;
-    }
-
-    .inquiries {
-      /* grid-row: 2 / span 2; */
-      /* grid-column: 12 / span 4; */
-      grid-column-start: 12;
-      grid-row-start: auto;
-    }
-
-    .explore {
-      /* grid-row: 2 / span 2; */
-      grid-column: 16 / span 4;
-      grid-row-start: auto;
-    }
-
-    .social {
-      /* grid-row: 2 / span 2; */
-      grid-column: 20 / span 4;
-      grid-row-start: auto;
-    }
-
-    .misc {
-      margin-top: 0;
-      grid-row: 6 / 7;
-      grid-column-start: 2;
-    }
-  }
-}
-@media (min-width: 980px) {
-  footer {
-    padding: 60px;
+.onScrollBG-footer {
+  position: relative;
+  .oval {
+    position: absolute;
+    top: 20px;
+    left: -210px;
+    max-width: 350px;
+    max-height: 350px;
+    width: 100%;
+    height: 100vw;
+    background-color: #fcd3c1;
+    border-radius: 50%;
+    z-index: -1;
   }
 }
 </style>

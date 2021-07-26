@@ -15,22 +15,22 @@
           <div class="wrapper">
             <ul>
               <li>
-                <router-link to="/our-work">Our work</router-link>
+                <router-link to="/">Our work</router-link>
               </li>
               <li>
-                <router-link to="/about">About</router-link>
+                <router-link to="/">About</router-link>
               </li>
               <li>
-                <router-link to="/insights">Insights</router-link>
+                <router-link to="/">Insights</router-link>
               </li>
               <li>
-                <router-link to="/news-and-events">News and events</router-link>
+                <router-link to="/">News and events</router-link>
               </li>
               <li>
-                <router-link to="/careers">Careers</router-link>
+                <router-link to="/">Careers</router-link>
               </li>
               <li>
-                <router-link to="/contact">Contact</router-link>
+                <router-link to="/">Contact</router-link>
               </li>
             </ul>
 
@@ -59,6 +59,7 @@ import Magnifier from './images/Magnifier.vue';
 import Logo from './images/Logo.vue';
 
 export default {
+  name: 'Home',
   components: {
     Logo,
     Magnifier,

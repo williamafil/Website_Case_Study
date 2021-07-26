@@ -2,18 +2,18 @@
   <div>
     <Header />
     <router-view />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   components: {
     Header,
-  },
-  setup() {
-    return {};
+    Footer,
   },
 };
 </script>
@@ -38,6 +38,16 @@ p {
 }
 
 /*
+  ::: H1
+*/
+h1.description {
+  margin: 0 0 2.625rem 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  z-index: 1;
+}
+
+/*
   ::: H2
 */
 .h2-motto {
@@ -45,7 +55,16 @@ p {
   font-size: 2.625rem;
   font-weight: 900;
   line-height: 1.2;
+  z-index: 1;
 }
+
+/*
+  ::: general container
+*/
+.container {
+  padding: 1.125em;
+}
+
 .section-heading {
   font-family: 'Source Serif Pro', serif;
   font-size: 2.25rem;
