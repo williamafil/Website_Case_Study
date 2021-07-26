@@ -1,6 +1,9 @@
 <template>
   <div id="home">
-    <div class="onScrollBG-nav"></div>
+    <!-- <div class="onScrollBG-nav"></div> -->
+    <div class="onScrollBG-nav">
+      <div class="blue"></div>
+    </div>
     <section class="hero container">
       <h2 class="h2-motto">Make New Experiences Possible</h2>
       <h1 class="description">
@@ -189,14 +192,13 @@ export default {
   },
   mounted() {
     // nav blue box
-    gsap.to('.onScrollBG-nav', {
+    gsap.to('.blue', {
       x: 1000,
-      y: -1000,
       scrollTrigger: {
-        trigger: '.onScrollBG-nav',
+        trigger: '.case-study',
         markers: false,
-        start: 'bottom 40%',
-        end: 'bottom -50%',
+        start: 'top 13%',
+        end: 'top -50%',
         scrub: 1,
       },
     });
@@ -274,18 +276,25 @@ export default {
 
 <style lang="scss" scoped>
 #home {
-  position: relative;
+  // position: relative;
 }
 
 .onScrollBG-nav {
-  background-color: #0976ac;
-  width: 300px;
-  height: 500px;
-  transform: rotate(45deg);
-
   position: fixed;
-  top: -180px;
-  left: -250px;
+  top: 0;
+  left: -112px;
+  z-index: 1;
+  transform-origin: center top;
+  transform: rotate(-45deg);
+
+  .blue {
+    position: absolute;
+    top: 0;
+    left: -112px;
+    width: 1100px;
+    height: 240px;
+    background-color: #0976ac;
+  }
 }
 
 .hero {
@@ -350,9 +359,7 @@ section.news {
   div {
     margin-bottom: 1rem;
   }
-  // .see-more-btn {
-  //   margin: 1em 0;
-  // }
+
   .see-more-btn::after {
     background-color: #bedde3;
   }
