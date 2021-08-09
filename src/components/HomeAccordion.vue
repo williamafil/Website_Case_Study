@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import Plus from '@/components/images/Plus.vue';
+import Plus from './images/Plus.vue';
 
 export default {
   components: {
