@@ -1,12 +1,10 @@
 import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import path from 'path';
+import reactRefresh from '@vitejs/plugin-react-refresh';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
-  base: './', // 打包路径
-  // 别名
+  plugins: [reactRefresh()],
+  base: '//Website_Case_Study//',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'), // 设置别名
