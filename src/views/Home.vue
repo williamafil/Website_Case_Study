@@ -303,6 +303,7 @@ export default {
   text-align: left;
   background-color: #fff;
   z-index: 100;
+  padding-top: 65px;
 }
 
 .case-study {
@@ -310,6 +311,7 @@ export default {
   flex-direction: column;
 
   .img-wrapper {
+    z-index: 2;
   }
 
   .case-study-card {

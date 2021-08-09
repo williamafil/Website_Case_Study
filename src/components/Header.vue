@@ -11,6 +11,15 @@
           <span class="line middle"></span>
           <span class="line bottom"></span>
         </label>
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li class="nav-link-item"><router-link to="/">Our work</router-link></li>
+            <li class="nav-link-item"><router-link to="/">About</router-link></li>
+          </ul>
+
+          <div></div>
+        </div>
+        <!-- mobile menu -->
         <div class="menu">
           <div class="wrapper">
             <ul>
@@ -83,6 +92,13 @@ nav.sticky {
   width: calc(100vw - 2.25em);
   margin: 1.125em;
 }
+@media (min-width: 768px) {
+  nav.sticky {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
 
 nav {
   position: relative;
@@ -101,6 +117,10 @@ nav {
       width: 70px;
       height: auto;
     }
+  }
+  .nav-menu {
+    display: none;
+    visibility: hidden;
   }
   .menu {
     position: absolute;
@@ -157,6 +177,28 @@ nav {
 
     a:hover {
       border-bottom: 6px solid #000;
+    }
+  }
+  @media (min-width: 980px) {
+    .menu {
+      display: none;
+    }
+    .hamburger {
+      display: none;
+      visibility: hidden;
+    }
+    .nav-menu {
+      display: block;
+      visibility: visible;
+      background-color: #ccc;
+      width: 70%;
+    }
+    .nav-links {
+      display: flex;
+      width: 50%;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav-link-item {
     }
   }
 }
